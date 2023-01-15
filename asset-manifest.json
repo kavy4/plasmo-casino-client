@@ -1,0 +1,13 @@
+{
+  "files": {
+    "main.css": "/plasmo-casino-client/static/css/main.8e63e589.css",
+    "main.js": "/plasmo-casino-client/static/js/main.9b451a36.js",
+    "index.html": "/plasmo-casino-client/index.html",
+    "main.8e63e589.css.map": "/plasmo-casino-client/static/css/main.8e63e589.css.map",
+    "main.9b451a36.js.map": "/plasmo-casino-client/static/js/main.9b451a36.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.8e63e589.css",
+    "static/js/main.9b451a36.js"
+  ]
+}
