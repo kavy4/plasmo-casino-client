@@ -1,8 +1,9 @@
 import React from 'react'
 import './Login.css'
-import { Link } from 'react-router-dom'
+import { Link, useNavigate } from 'react-router-dom'
 
 function Login() {
+	const navigate = useNavigate()
   return (
 		<div id='login-card'>
 			<h1 id='title'>Вход</h1>
@@ -19,7 +20,7 @@ function Login() {
 				<input type="password" />
 			</div>
 
-			<button>Готово</button>
+			<button onClick={() => navigate('/')}>Готово</button>
 
 			<p>Ещё нет аккаунта? <Link className='login-link' to='/register'>Регистрация</Link></p>
 		</div>
