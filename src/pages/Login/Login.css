@@ -1,0 +1,22 @@
+#login-card {
+    width: 40vw;
+    padding: 25px;
+    border-radius: 14px;
+    border: 1px solid #27292b;
+    margin: 50px auto;
+    text-align: center;
+    background: #111414;
+}
+
+.login-link {
+    text-decoration: 0;
+    color: #1b6bf2;
+    transition: 0.2s;
+    background: #111414;
+}
+
+.login-link:hover {
+    color: #1964dc;
+    text-decoration: underline;
+    background: #111414;
+}
