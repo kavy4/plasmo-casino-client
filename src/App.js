@@ -17,11 +17,9 @@ function App() {
   return (
 		<Layout balance={balance}>
 			<Routes>
-				<Route path='/casino' element={ <RequireLogin isLogin={isLogin}>
+				<Route path='/' element={ <RequireLogin isLogin={isLogin}>
 					<Casino balance={balance} setBalance={setBalance} />
 				</RequireLogin> } />
-
-				<Route path='/' element={<Navigate to='/casino' />} />
 				
 				<Route path='/register' element={ <Register setIsLogin={setIsLogin} /> } />
 				<Route path='/login' element={ <Login setIsLogin={setIsLogin} /> } />
