@@ -1,0 +1,19 @@
+.notfoundpage-link {
+    text-decoration: 0;
+    color: #1b6bf2;
+    transition: 0.2s;
+}
+
+.notfoundpage-link:hover {
+    color: #1964dc;
+    text-decoration: underline;
+}
+
+#NotFoundPage {
+    height: 90vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    row-gap: 25px;
+}

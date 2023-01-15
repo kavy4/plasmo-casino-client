@@ -7,6 +7,7 @@ import Layout from './components/Layout'
 import Register from './pages/Register/Register'
 import Login from './pages/Login/Login'
 import Casino from './pages/Casino/Casino'
+import NotFoundPage from './pages/NotFoundPage/NotFoundPage'
 import RequireLogin from './components/RequireLogin'
 
 function App() {
@@ -23,6 +24,7 @@ function App() {
 				
 				<Route path='/register' element={ <Register setIsLogin={setIsLogin} /> } />
 				<Route path='/login' element={ <Login setIsLogin={setIsLogin} /> } />
+				<Route path='*' element={ <NotFoundPage /> } />
 			</Routes>
 		</Layout>
   )
