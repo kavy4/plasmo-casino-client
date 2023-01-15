@@ -22,7 +22,7 @@ function Login({ setIsLogin }) {
 				if (user.password == newUser.password) {
 					console.log('да')
 					setIsLogin(true)
-					return navigate('/casino')
+					return navigate('/')
 				}
 			}
 		})

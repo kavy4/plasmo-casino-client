@@ -13,7 +13,7 @@ function Casino({ balance, setBalance }) {
 		}
 
 		if (change == randomNumber) {
-			setBalance(Math.floor(balance + bet * 1.25))
+			setBalance(Math.floor(balance + bet))
 			console.log('ура')
 		}
 		else {

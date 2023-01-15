@@ -4,7 +4,7 @@ import Header from './Header/Header'
 function Layout({ balance, children }) {
   return (
 		<>
-			<Header balance={balance}>Plasmo Casino</Header>
+			<Header balance={balance} />
 			{ children }
 		</>
 	)

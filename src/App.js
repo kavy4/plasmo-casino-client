@@ -15,6 +15,10 @@ function App() {
 
   const [balance, setBalance] = useState(10)
 
+  function SaveUserAccount(userAccount) {
+	//
+  }
+
   return (
 		<Layout balance={balance}>
 			<Routes>

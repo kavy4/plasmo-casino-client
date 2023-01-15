@@ -34,7 +34,7 @@ function Register({ setIsLogin }) {
 			axios.post('/api/register', newUser)
 			console.log('да')
 			setIsLogin(true)
-			navigate('/casino')
+			navigate('/')
 		}
 	} 
 
