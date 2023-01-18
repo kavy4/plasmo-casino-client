@@ -1,4 +1,4 @@
-import React, { useState } from 'react'
+import React, { useState, useEffect } from 'react'
 import { Route, Routes, Navigate } from 'react-router-dom'
 import axios from './axios'
 import './App.css'
@@ -12,11 +12,25 @@ import RequireLogin from './components/RequireLogin'
 
 function App() {
   const [isLogin, setIsLogin] = useState(false)
+  
+  const [balance, setBalance] = useState(0)
 
-  const [balance, setBalance] = useState(10)
+  const [userAccount, setUserAccount] = useState({
+	login: '',
+	password: '',
+	balance: balance
+  })
 
-  function SaveUserAccount(userAccount) {
-	//
+  console.log(userAccount)
+
+  useEffect(() => {
+	axios.post('/api/save-user', userAccount)
+  }, [balance])
+
+  function LoginOrRegister(newAccount, newBalance = 0) {
+	setIsLogin(true)
+	setBalance(newBalance)
+	setUserAccount({ ...userAccount, login: newAccount.login, password: newAccount.password })
   }
 
   return (
@@ -26,8 +40,8 @@ function App() {
 					<Casino balance={balance} setBalance={setBalance} />
 				</RequireLogin> } />
 				
-				<Route path='/register' element={ <Register setIsLogin={setIsLogin} /> } />
-				<Route path='/login' element={ <Login setIsLogin={setIsLogin} /> } />
+				<Route path='/register' element={ <Register setIsLogin={LoginOrRegister} /> } />
+				<Route path='/login' element={ <Login setIsLogin={LoginOrRegister} /> } />
 				<Route path='*' element={ <NotFoundPage /> } />
 			</Routes>
 		</Layout>

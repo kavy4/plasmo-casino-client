@@ -31,12 +31,12 @@ function Register({ setIsLogin }) {
 		})
 
 		if (isUniq) {
-			axios.post('/api/register', newUser)
+			axios.post('/api/register', { ...newUser, balance: 0 })
 			console.log('да')
-			setIsLogin(true)
+			setIsLogin(newUser)
 			navigate('/')
 		}
-	} 
+	}
 
 	return (
 		<div id='register-card'>

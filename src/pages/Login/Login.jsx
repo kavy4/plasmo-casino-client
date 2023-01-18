@@ -21,7 +21,7 @@ function Login({ setIsLogin }) {
 			if (user.login == newUser.login) {
 				if (user.password == newUser.password) {
 					console.log('да')
-					setIsLogin(true)
+					setIsLogin(newUser, user.balance)
 					return navigate('/')
 				}
 			}
